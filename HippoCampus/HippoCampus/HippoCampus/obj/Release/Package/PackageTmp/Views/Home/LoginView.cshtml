@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "LoginView";
+}
+
+<div class="jumbotron">YOU ARE LOG IN AS ADMIN OR STUDENT WORKER</div>
+<h2>LoginView</h2>
+
+
+<li>
+    <!--This Action Link goes name you want for link, cshtml view you want, in the folder you want to view -->
+    @Html.ActionLink("Potential Student Create", "Create", "FutureStudent", new { @class = "element" }, null)
+</li>
+<li>
+    @Html.ActionLink("View/Edit/Delete Student Infomation", "Index", "FutureStudent")
+</li>
+<li>
+    @Html.ActionLink("Student Worker List", "Index", "StudentWorker")
+</li>
+<li>
+    @Html.ActionLink("Create Admin User", "RegisterAdmin", "Account")
+</li>

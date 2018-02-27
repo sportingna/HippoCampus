@@ -1,0 +1,76 @@
+﻿@model IEnumerable<HippoCampus.Models.FutureStudentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_email)
+        </th>
+        
+       
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_arr_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_arr_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_flight_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ftre_stdnt_trans_req)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_email)
+        </td>
+        
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_arr_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_arr_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_flight_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ftre_stdnt_trans_req)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ftre_stdnt_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ftre_stdnt_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ftre_stdnt_id })|
+            @Html.ActionLink("Activate", "Activate", new { id = item.ftre_stdnt_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FtreStdntFrm">
+    <Key>
+      <PropertyRef Name="bearpass_Id" />
+    </Key>
+    <Property Name="bearpass_Id" Type="Int32" Nullable="false" />
+    <Property Name="ftre_stdnt_first_name" Type="String" MaxLength="35" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ftre_stdnt_last_name" Type="String" MaxLength="35" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ftre_stdnt_email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ftre_stdnt_dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ftre_stdnt_gender" Type="String" MaxLength="6" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ftre_stdnt_arr_date_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ftre_stdnt_flight_num" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ftre_stdnt_trans_req" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ftre_stdnt_des_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ftre_stdnt_other_desc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FtreStdntFrms" EntityType="Self.FtreStdntFrm" />
+  </EntityContainer>
+</Schema>

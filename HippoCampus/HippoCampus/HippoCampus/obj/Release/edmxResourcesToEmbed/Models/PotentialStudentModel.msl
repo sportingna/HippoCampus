@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="FtreStdntFrms">
+      <EntityTypeMapping TypeName="Database1Model.FtreStdntFrm">
+        <MappingFragment StoreEntitySet="FtreStdntFrm">
+          <ScalarProperty Name="bearpass_Id" ColumnName="bearpass_Id" />
+          <ScalarProperty Name="ftre_stdnt_first_name" ColumnName="ftre_stdnt_first_name" />
+          <ScalarProperty Name="ftre_stdnt_last_name" ColumnName="ftre_stdnt_last_name" />
+          <ScalarProperty Name="ftre_stdnt_email" ColumnName="ftre_stdnt_email" />
+          <ScalarProperty Name="ftre_stdnt_dob" ColumnName="ftre_stdnt_dob" />
+          <ScalarProperty Name="ftre_stdnt_gender" ColumnName="ftre_stdnt_gender" />
+          <ScalarProperty Name="ftre_stdnt_arr_date_time" ColumnName="ftre_stdnt_arr_date_time" />
+          <ScalarProperty Name="ftre_stdnt_flight_num" ColumnName="ftre_stdnt_flight_num" />
+          <ScalarProperty Name="ftre_stdnt_trans_req" ColumnName="ftre_stdnt_trans_req" />
+          <ScalarProperty Name="ftre_stdnt_des_desc" ColumnName="ftre_stdnt_des_desc" />
+          <ScalarProperty Name="ftre_stdnt_other_desc" ColumnName="ftre_stdnt_other_desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
