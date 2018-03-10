@@ -1,0 +1,87 @@
+﻿@model IEnumerable<HippoCampus.Models.InternStudentModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_last_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_arr_date_time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_flight_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_trans_req)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_des_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intr_stdnt_other_desc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_arr_date_time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_flight_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_trans_req)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_des_desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intr_stdnt_other_desc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= item.intr_stdnt_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.intr_stdnt_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.intr_stdnt_Id })
+        </td>
+    </tr>
+}
+
+</table>

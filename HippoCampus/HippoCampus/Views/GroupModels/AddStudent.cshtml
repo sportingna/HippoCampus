@@ -1,0 +1,36 @@
+﻿@model HippoCampus.Models.UngroupStudentViewModel
+@{
+    ViewBag.Title = "AddStudent";
+}
+
+<h2>Add Student</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        
+    </tr>
+    @foreach (var item in Model.UngroupedStudent)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.intr_stdnt_first_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.intr_stdnt_last_name)
+            </td>
+            <td>
+                @Html.ActionLink("Add Student to Group", "AddWorkerGroup", new { id = item.intr_stdnt_Id, groupId = Model.GroupId })
+            </td>
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

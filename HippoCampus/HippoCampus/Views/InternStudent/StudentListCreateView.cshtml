@@ -1,0 +1,151 @@
+﻿@model HippoCampus.Models.StudentListView
+
+@{
+    ViewBag.Title = "To Do List";
+}
+
+<h2></h2>
+
+@using (Html.BeginForm())
+{
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <td></td>
+        <th>
+            Description
+        </th>
+        <td></td>
+        <th>
+            
+        </th>
+    </tr>
+    <tr>
+        On Campus Tasks
+    </tr>
+    @foreach (var item in Model.ListItemPriOne)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListName)
+            </td>
+            <td>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListDec)
+            </td>
+            <td>
+
+            </td>
+            <td>
+                @if (item.Checked == "Completed")
+                {
+                    @Html.ActionLink("Completed", "RemoveListItem", new { listId = item.ListId, studId = Model.UserId })
+                }
+                @if(item.Checked == "No" )
+                {
+                    @Html.ActionLink("Not Completed", "CompletedListItem", new { listId = item.ListId, studId = Model.UserId })
+                }
+
+                @*@Html.CheckBoxFor(modelItem => item.Checked, new { id = item.ListId })*@
+            </td>
+        </tr>
+    }
+
+
+</table>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <td></td>
+        <th>
+            Description
+        </th>
+        <td></td>
+        <th>
+            Checked
+        </th>
+    </tr>
+    <tr>
+        Off Campus Tasks
+    </tr>
+    @foreach (var item in Model.ListItemPriTwo)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListName)
+            </td>
+            <td>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListDec)
+            </td>
+            <td>
+
+            </td>
+            <td>
+                @if (item.Checked == "Completed")
+                {
+                    @Html.ActionLink("Completed", "RemoveListItem", new { listId = item.ListId, studId = Model.UserId })
+                }
+                @if (item.Checked == "No" || item.Checked == null)
+                {
+                    @Html.ActionLink("Not Completed", "CompletedListItem", new { listId = item.ListId, studId = Model.UserId })
+                }
+            </td>
+        </tr>
+    }
+</table>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <td></td>
+        <th>
+            Description
+        </th>
+        <td></td>
+        <th>
+            Checked
+        </th>
+    </tr>
+<tr>
+    Recommended/Optional Tasks
+</tr>
+    @foreach (var item in Model.ListItemPriThree)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListName)
+            </td>
+            <td>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ListDec)
+            </td>
+            <td>
+
+            </td>
+            <td>
+                @if (item.Checked == "Completed")
+                {
+                    @Html.ActionLink("Completed", "RemoveListItem", new { listId = item.ListId, studId = Model.UserId })
+                }
+                @if (item.Checked == "No")
+                {
+                    @Html.ActionLink("Not Completed", "CompletedListItem", new { listId = item.ListId, studId = Model.UserId })
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+}

@@ -1,0 +1,65 @@
+﻿@model HippoCampus.Models.GroupedUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
+        <dt>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.GroupId })
+        </dt>
+
+    </dl>
+</div>
+<div>
+    @Html.DisplayNameFor(name=>name.Worker)
+    <table class="table">
+        @foreach (var item in Model.Worker)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.wrkr_stdnt_last_name), @Html.DisplayFor(modelItem => item.wrkr_stdnt_first_name)
+                </td>       
+                <td>
+                    <a href="@Url.Action("RemoveUserView", "GroupModels", new { Id = item.wrkr_stdnt_id, groupId = Model.GroupId })">Remove Worker</a>
+                </td>                    
+            </tr>
+        }
+
+    </table>
+</div>
+<div>
+    @Html.DisplayNameFor(name => name.Student)
+    <table class="table">
+        @foreach (var item in Model.Student)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.intr_stdnt_last_name), @Html.DisplayFor(modelItem => item.intr_stdnt_first_name)
+                </td>
+                <td>
+                    <a href="@Url.Action("StudentListCreateView", "InternStudent", new { Id = item.intr_stdnt_Id})">List</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("RemoveUserView", "GroupModels", new { Id = item.intr_stdnt_Id, groupId = Model.GroupId })">Remove Student</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<p>
+     |
+    @Html.ActionLink("Back to List", "Index")
+</p>

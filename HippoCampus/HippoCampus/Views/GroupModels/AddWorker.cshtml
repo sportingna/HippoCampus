@@ -1,0 +1,60 @@
+﻿@model HippoCampus.Models.UngroupWorkerViewModel
+@{
+    ViewBag.Title = "AddWorker";
+}
+
+<h2>Add Worker</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+       
+        <th>
+           Transport
+        </th>
+        <th>
+            Availability
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.UngroupedWorker)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.wrkr_stdnt_first_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wrkr_stdnt_last_name)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.wrkr_stdnt_phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.wrkr_stdnt_email)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.wrkr_stdnt_transport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.wrkr_stdnt_availability)
+            </td>
+            <td>
+                @Html.ActionLink("Add Worker to Group", "AddWorkerGroup", new { id = item.wrkr_stdnt_id, groupId = Model.GroupId})
+            </td>
+        </tr>
+    }
+
+            
+        
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -1,0 +1,129 @@
+﻿/* Website Layout Styling File */
+html {
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+/* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+/*************************************************
+**********           Footer             **********
+*************************************************/
+.center-item{
+    display: block;
+    float:none;
+    margin:auto;
+}
+
+/*************************************************
+**********          Carousel            **********
+*************************************************/
+
+.carousel, .item {
+  background-color: #696969 !important;
+}
+#myCarousel {
+  margin-top: -3px;
+
+}
+.carousel-inner {
+    width: 120%;
+    margin-left: -10%;
+}
+@media (min-width: 768px) {
+    .carousel-inner {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    height: 100%;
+}
+
+/*************************************************
+**********           Footer             **********
+*************************************************/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    background-color: #5E0009;    
+    color: #ffffff;
+}
+footer p {
+    padding-top: 30px;
+}
+
+/*************************************************
+**********        Jumbotron             **********
+*************************************************/
+.jumbotron {
+    margin-top: 8px;
+    min-height: 200px;
+    background: #ccc url(/images/patch.png);
+    border: 5px solid #ccc;
+}
+
+.jumbotron p {
+    font-size: 21px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+/*************************************************
+**********         Navigation           **********
+*************************************************/
+
+/*background color, font, border*/
+.navbar-default {
+    background-color: #5E0009;
+    font-size: 18px;
+    border-bottom: solid 10px;
+    border-bottom-color: #FFF;
+    margin-top: 0 auto;
+    margin-bottom: 0 auto;
+
+}
+
+/*brand logo color, font*/
+.navbar-default .navbar-brand {
+    color: #FFF;
+    font-size: 18px;
+}
+
+/*brand logo hover, font*/
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus {
+    color: #FFF;
+    font-size: 18px;
+}
+
+/*link color*/
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+/*hover background, font, text color*/
+.navbar-default .navbar-nav > li > a:hover,.navbar-default .navbar-nav > li > a:focus {
+    color: #000;
+    background-color: #AAA69A;
+    font-size: 18px;
+}
+
+/* active/curent, background,text color*/
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #64819F;
+    font-size: 18px;
+}
+
+
+

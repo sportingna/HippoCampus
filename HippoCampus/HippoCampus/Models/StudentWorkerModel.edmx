@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HippoCampusDBStudentWorkerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="wrkr_stdnt">
+          <Key>
+            <PropertyRef Name="wrkr_stdnt_id" />
+          </Key>
+          <Property Name="wrkr_stdnt_id" Type="int" Nullable="false" />
+          <Property Name="wrkr_stdnt_first_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="wrkr_stdnt_last_name" Type="nchar" MaxLength="40" Nullable="false" />
+          <Property Name="wrkr_stdnt_phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="wrkr_stdnt_email" Type="nvarchar" MaxLength="100" />
+          <Property Name="wrkr_stdnt_transport" Type="nchar" MaxLength="3" Nullable="false" />
+          <Property Name="wrkr_stdnt_availability" Type="nchar" MaxLength="3" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HippoCampusDBStudentWorkerModelStoreContainer">
+          <EntitySet Name="wrkr_stdnt" EntityType="Self.wrkr_stdnt" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HippoCampusDBStudentWorkerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="wrkr_stdnt">
+          <Key>
+            <PropertyRef Name="wrkr_stdnt_id" />
+          </Key>
+          <Property Name="wrkr_stdnt_id" Type="Int32" Nullable="false" />
+          <Property Name="wrkr_stdnt_first_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="wrkr_stdnt_last_name" Type="String" MaxLength="40" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="wrkr_stdnt_phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="wrkr_stdnt_email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="wrkr_stdnt_transport" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="wrkr_stdnt_availability" Type="String" MaxLength="3" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="HippoCampusStudentWorker" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="wrkr_stdnt" EntityType="Self.wrkr_stdnt" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HippoCampusDBStudentWorkerModelStoreContainer" CdmEntityContainer="HippoCampusStudentWorker">
+          <EntitySetMapping Name="wrkr_stdnt">
+            <EntityTypeMapping TypeName="HippoCampusDBStudentWorkerModel.wrkr_stdnt">
+              <MappingFragment StoreEntitySet="wrkr_stdnt">
+                <ScalarProperty Name="wrkr_stdnt_id" ColumnName="wrkr_stdnt_id" />
+                <ScalarProperty Name="wrkr_stdnt_first_name" ColumnName="wrkr_stdnt_first_name" />
+                <ScalarProperty Name="wrkr_stdnt_last_name" ColumnName="wrkr_stdnt_last_name" />
+                <ScalarProperty Name="wrkr_stdnt_phone" ColumnName="wrkr_stdnt_phone" />
+                <ScalarProperty Name="wrkr_stdnt_email" ColumnName="wrkr_stdnt_email" />
+                <ScalarProperty Name="wrkr_stdnt_transport" ColumnName="wrkr_stdnt_transport" />
+                <ScalarProperty Name="wrkr_stdnt_availability" ColumnName="wrkr_stdnt_availability" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

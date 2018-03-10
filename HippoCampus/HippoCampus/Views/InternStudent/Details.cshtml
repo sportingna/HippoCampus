@@ -1,0 +1,98 @@
+﻿@model HippoCampus.Models.InternStudentModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InternStudentModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_arr_date_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_arr_date_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_flight_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_flight_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_trans_req)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_trans_req)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_des_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_des_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.intr_stdnt_other_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.intr_stdnt_other_desc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.bearpass_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

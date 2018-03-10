@@ -1,0 +1,37 @@
+﻿@model IEnumerable<HippoCampus.Models.GroupModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th></th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            <a href="@Url.Action("Details", "GroupModels", new { Id=item.GroupId})">@Html.DisplayFor(modelItem => item.GroupName)</a>
+            
+        </td>
+        <td>
+            @Html.ActionLink("Add Student Worker", "AddWorker", new { id=item.GroupId }) |
+            @Html.ActionLink("Add Students", "AddStudent", new { id=item.GroupId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GroupId })
+        </td>
+    </tr>
+}
+
+</table>
